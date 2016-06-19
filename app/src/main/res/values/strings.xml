@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">heroku</string>
+    <string name="title_deploymentitem_detail">DeploymentItem Detail</string>
+</resources>
