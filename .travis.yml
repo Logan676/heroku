@@ -1,0 +1,19 @@
+language: android
+sudo: false
+jdk: oraclejdk8
+android:
+  components:
+      - tools
+      - platform-tools
+      - build-tools-23.0.2
+      - android-23
+      - extra-android-support
+      - extra-android-m2repository
+
+script:
+    - ./gradlew clean assemble
+deploy:
+  provider: heroku
+  api_key:
+    secure: TokQI8Jm3t9D+/fe59KGRPDmlG9EmO8OJAWcQHObaMg7UTvEVzd6WXGtHj86vLEhvZzuuwy0tiMX6SHqS6U1vlimLZz05Nve4sQzflmp3XKwqSARFBzq/irFvsc9PzBtVnKZLc7gJp2NCJ559+s8lAPrhhSWFntQ9jdHa2S5JkO7Yjvr5Ro5mqBTTdtxnhInC1FEaDUCLbkkyFFTrHrobRTFe9yKPVWOQQRILrJ+WkiRQ3yN8zb+ORU081DJ16W0Cn3CTIAekddVOM80kx2LPetQgc/1nluahkEVwEEiFrFYw2LZKOQ8ajZJ6uMiYlaIogh90BPa/sMx+z+zJJCaKoIzxBvZu34YhEt4btxPXGcA2AKf5KF96lt8sm8RRP4WQrjzMJNFKgIW89CfClT+BTHsFY9RRRLyUUzmuxLPuuMSxXW+kLEHOBEq6Fdgu2OSX5fACfjC/01D41BJfrFQ2IlALibsgAIxoiIJtnw+LtoXHVlqNWo+vysj4/SR3lNiA/rR+xj9j1wrprheG7F4CAE2njSik1IB2rrN9WSkuP3c+UHOK7QOMJOkGnToYuSfySkvrjRrSwMYd7/5Iv0m1rlQxkLvyLSbyllartn0Q8JFcfSI98dpwtEIeR39bnNRkJDNSCdTSas7BA83Z5INSxl46rmX9nkTKzjRwV1Q2Zw=
+  app: heroku
